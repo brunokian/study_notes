@@ -1,0 +1,82 @@
+create-react-app - criate a template of a react project
+
+npx create-react-app <file name>
+
+
+
+Component class model
+
+class ReactClass extends React.Component {
+  render() {
+    return (
+      <h1>My first React Class Component!</h1>
+    )
+  }
+}
+
+
+
+Props
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Greeting name="Samuel" lastName="Silva" />
+      </div>
+    );
+  }
+}
+
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name} {this.props.lastName}</h1>;
+  }
+}
+
+
+
+props children
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className='main'>
+        <ComponentePai>
+          <p>SUPIMPA</p>
+        </ComponentePai>
+      </div>
+    )
+  }
+}
+ 
+const ComponentePai = (props) => {
+  return (
+    <div>
+      {props.children}
+    </div>
+  )
+}
+ 
+javascript is not good with POO, so, you have to bind the functions that you create, so you can use then in the callbacks
+
+class App extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      numeroDeCliques: 0
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = () => {
+    this.setState((estadoAnterior, _props) => ({
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
+    }))
+  }
+
+  render() {
+    return <button onClick= {this.handleClick}>{this.state.numeroDeCliques}</button>
+  }
+}

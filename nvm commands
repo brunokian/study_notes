@@ -1,0 +1,25 @@
+$ nvm current - show the current version the terminal is using
+
+$ nvm ls - list of nodes versions in your computer
+
+$ nvm ls-remote - list the nodes versions avaliable to download
+
+$ nvm install node - install the most recent version of node
+
+$ nvm install vX.X.X - install the specified version
+
+$ nvm uninstall vX.X.X - unistall the specified version
+
+$ nvm use node - use the most recent version of node
+
+$ nvm use vX.X.X - use the specified version
+
+$ nvm alias default vX.X.X - define a default version
+
+* defining a specific version for a project
+
+  - Create a file and naming: ".nvmrc"
+  - In the file, type the version 
+
+
+
